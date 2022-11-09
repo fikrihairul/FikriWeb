@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Fikri Hairul</a>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#AboutMe">About Me </a></li>
+            <li><a href="#Portofolio">Portofolio</a></li>
+            <li><a href="#SocialMedia">Social Media</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Welcome</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <section id="home" class="sec"> 
+        <div id="sec">
+            <h2>Tugas Pengantar Teknologi dan Komunikasi</h2>
+            <p>Sebelum itu, saya ingin mengucapkan terimakasih kepada bapak(siapa) yang telah membimbing mata kuliah PTIK ini.
+            Saya membuat tugas berupa website dengan tambahan efek animasi parallax scroll dibantu dengan referensi dibeberapa
+            platform seperti youtube dan artikel di google. Mohon maaf jika tugas yang saya berikan ini masih memiliki beberapa
+            kesalahan, karena masih ditahap belajar. Oleh Karena itu, saya meminta kritik dan sarannya kepada bapak(siapa) agar
+            bisa meningkatkan wawasan terkait website ini.
+            <br><br>
+            Hambatan dalam mengerjakan tugas ini adalah keterbatasan device dan mengharuskan untuk meminjam laptop teman sehingga
+            mampu mengerjakan tugas ini h-1 sebelum deadline, lalu selain dari device ada juga terkait kurangnya wawasan tentang 
+            programming karena lulusan dari sekolah menegah atas dan mengharuskan untuk mempelajari secara mandiri mengenai dasar-dasar 
+            tentang html dan css.
+            <br><br>
+            Lesson learn yang saya dapatkan pada tugas kali ini adalah saya mendapatkan wawasn baru terkait html, css dan javascript,
+            mengerti perbedaan fungsi dari setiap bahasa pemrograman contohnya pada ddp yang mempelajari c dan ptik yang mempelajari 
+            html dan css, menjadi lebih teliti ketika menemukan error pada code dan mengerti setiap syntax itu bisa diapahami serta
+            dianalogikan. Saya ada ketertarikan untuk mendalami ini, karena saya menyukai yang hal dalam mendesain suatu produk seperti
+            poster, animasi, interior, website, aplication, dll sehingga memiliki tujuan untuk menjadi frontend developer.
+            </p>
+        </div>
+    </section>
+
+    <img src="Avatar.png" class="center">
+    <section id="AboutMe" class="sec">
+        <div id="sec">
+            <h2 >About Me</h2>
+            <p>
+                Nama: Fikri Hairul Fahri <br>
+                Kelas: D3-JTK-1B <br>
+                Pendidikan: Politeknik Negeri Bandung <br>
+                Kelahiran: Karawang, 20 juli 2004 <br>
+                Cita-cita: Seniman <br>
+                Hobbi: <br>
+                - Bermain Musik <br>
+                - Gaming <br>
+                - 3D Design <br>
+                - Videogradi <br>
+                - Visual Art
+            </p>
+        </div>
+    </section>
+
+    <section id="Portofolio" class="sec">
+        <div id="sec">
+            <h2>Portofolio</h2>
+            <p>
+                <video controls>
+                   <source src="3d_Animation.mp4" type="video/mp4">
+                </video>
+                <br><br>
+            </p>
+        </div>
+    </section>
+
+    <section id="SocialMedia" class="sec">
+        <div id="sec">
+            <h2>Social Media</h2>
+            <p>
+                <a href="https://www.facebook.com/fikri.hairul.129"><button type="button" class="social-media-button icon facebook">Facebook</button></a>
+                <a href="https://www.instagram.com/fix.zx/"><button type="button" class="social-media-button icon instagram">Instagram</button></a>
+                <a href="https://www.youtube.com/channel/UCrAFn3ZcorgBhZVnrSJ8gGA"><button type="button" class="social-media-button icon youtube">Youtube</button></a>
+            </p>
+        </div>
+    </section>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+       window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + "px";
+        mountains_behind.style.top = value * 0.05 + "px";
+        mountains_front.style.top = value * 0 + "px";
+        text.style.marginRight = value * 4 + "px";
+        text.style.marginTop = value * 1.5 + "px";
+        btn.style.marginTop = value * 1.5 + "px";
+        header.style.top = value * 0.5 + "px";
+       })
+        
+    
+
+    </script>
+</body>
+</html>
